@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CDN link to add html2pdf library -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="text.css">
+
+    <!-- CDN link of font awosem library to import icons -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+</head>
+<body>
+    
+    <div class="section">
+
+            <div class="col">
+ 
+                <div class="file">
+                
+                    <input id="filename-input" type="text" placeholder="enter your file name" />
+                    <button id="pdfbtn" onclick="pdfgenerat()">save as PDF</button>
+                </div>
+
+               <div class="box">
+
+                <input type="number" id="font-size" min="1" max="100" value="14" onchange="fontsize(this)">
+               
+                <button type="button" onclick="bold(this)">
+                    <i class="fa-solid fa-bold"></i>
+                </button>
+
+                <button type="button" onclick="italic(this)">
+                    <i class="fa-solid fa-italic"></i>
+                </button>
+
+                <button type="button" onclick="underline(this)">
+                    <i class="fa-solid fa-underline"></i>
+                </button>
+                
+                <button type="button" onclick="justify_left(this)">
+                    <i class="fa-solid fa-align-left"></i>
+                </button>
+
+                <button type="button" onclick="justify_center(this)">
+                    <i class="fa-solid fa-align-center"></i>
+                </button>
+
+                <button type="button" onclick="justify_right(this)">
+                    <i class="fa-solid fa-align-right"></i>
+                </button>
+
+                <button type="button" onclick="full(this)">
+                    <i class="fa-solid fa-align-justify"></i>
+                </button>
+
+                <button type="button" onclick="capital(this)">
+                    aA
+                </button>
+
+                <button type="button" onclick="erase(this)">
+                    <i class="fa-solid fa-text-slash"></i>
+                </button>
+
+                <input type="color" onchange="font_color(this)">
+
+                <textarea id="textarea" placeholder="enter your text here" spellcheck="false"></textarea>
+               
+            </div>
+
+        </div>
+    
+    
+    <script src="text.js"></script>
+</body>
+</html>
